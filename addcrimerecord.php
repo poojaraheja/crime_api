@@ -7,10 +7,10 @@ header('Access-Control-Allow-Headers:*');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include 'DbConnect.php';
     $user = json_decode(file_get_contents('php://input'));
-    $email = $user->email;
-    $sql = "SELECT * FROM crime WHERE email = '$email'";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
+    // $email = $user->email;
+    // $sql = "SELECT * FROM crime WHERE email = '$email'";
+    // $result = mysqli_query($conn, $sql);
+    // $row = mysqli_fetch_assoc($result);
 
 
     $crimetitle = $user->crimetitle;
