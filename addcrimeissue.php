@@ -18,13 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $crimescenetitle = $user->crimescenetitle;
     $mode = $user->mode;
     $lattitude = $user->lattitude;
-    $crime_description = $user->crime_description;
+    $longitude = $user->$longitude;
+    $desc = $user->description;
 
-
-
-
-
-    $existsql = "INSERT INTO `crime_record` (`s_no`, `crimetitle`, `crimeaddress`, `crimetype`, `location_map_latitude`, `location_map_longitude`, `crime_desc`) VALUES (null, '$crimetitle', '$crimeaddress', '$location_map_latitude', '$mode', '$location_map_longitude', '$crime_description');";
+    $existsql = "INSERT INTO `crime_issue` (`s_no`, `name`, `number`, `crimescenetitle`, `mode`, `lattitude`, `longitude`, `desc`) VALUES (null, '$name', '$number', '$crimescenetitle', '$mode', '$lattitude', '$longitude', '$desc');";
 
     $result_customer = mysqli_query($conn, $existsql);
     $response = '{"create":1}';
