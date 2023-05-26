@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin:*');
 header('Access-Control-Allow-Headers:*');
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   include 'DbConnect.php';
   $user = json_decode(file_get_contents('php://input'));
   // $email = $user->email;
